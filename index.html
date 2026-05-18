@@ -437,6 +437,60 @@
         .whatsapp:hover {
             transform: scale(1.07);
         }
+
+        .variacoes {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .variacoes button {
+            background: #111;
+            color: white;
+            border: 2px solid rgb(248, 164, 55);
+            border-radius: 20px;
+            padding: 6px 12px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .variacoes button:hover {
+            background: rgb(248, 164, 55);
+            color: black;
+        }
+
+        .btn-comprar {
+            width: 100%;
+            margin-top: 12px;
+            padding: 14px;
+
+            background: rgb(248, 164, 55);
+            color: #111;
+
+            border: none;
+            border-radius: 12px;
+
+            font-size: 18px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.25s ease;
+
+            box-shadow: 0 0 12px rgba(248, 164, 55, 0.35);
+        }
+
+        .btn-comprar:hover {
+            transform: scale(1.04);
+            background: rgb(255, 180, 80);
+            box-shadow: 0 0 20px rgba(248, 164, 55, 0.6);
+        }
+
+        .btn-comprar:active {
+            transform: scale(0.97);
+        }
     </style>
 </head>
 
@@ -445,10 +499,13 @@
     <nav class="topo-fixo">
         <a href="#classificacao">📊 Classificação</a>
         <a href="#fones">🎧 Fones</a>
+        <a href="#carregadores">⚡ Carregadores</a>
+        <a href="#teclados">⌨️ Teclados</a>
         <a href="#mouses">🖱️ Mouses</a>
         <a href="#mousepads">🎯 Mousepads</a>
         <a href="#utilitarios">🧰 Utilitários</a>
         <a href="#contato">📞 Contato</a>
+
     </nav>
 
     <section id="inicio" class="hero">
@@ -522,7 +579,25 @@
 
             <div class="produtos">
                 <div class="produto">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_747350-MLB106967900316_022026-O.webp" alt="KZ EDX Pro">
+                    <img id="kz-img" src="https://http2.mlstatic.com/D_NQ_NP_747350-MLB106967900316_022026-O.webp"
+                        alt="KZ EDX Pro">
+
+                    <div class="variacoes">
+                        <button
+                            onclick="trocarKZ('https://http2.mlstatic.com/D_NQ_NP_747350-MLB106967900316_022026-O.webp')">
+                            ⚪
+                        </button>
+
+                        <button
+                            onclick="trocarKZ('https://kzmusicstore.com.br/cdn/shop/files/kz-edx-pro-x-fone-de-ouvido-in-ear-lancamento-kz-music-store-3_1024x.webp?v=1713459883')">
+                            ⚫
+                        </button>
+
+                        <button
+                            onclick="trocarKZ('https://i.redd.it/custom-kz-edx-pro-v0-eq3n1nhhzesc1.jpg?width=2992&format=pjpg&auto=webp&s=c824954eaac6139e9a2dfeac08f87d577ffa9a69')">
+                            🔵
+                        </button>
+                    </div>
                     <div class="selo premium">🔴 Produto premium</div>
                     <div class="selo procurado">⭐ Mais procurado (#1)</div>
                     <div class="selo melhorpreco">🔥 Melhor preço</div>
@@ -532,12 +607,34 @@
                     <p class="avaliacao">⭐⭐⭐⭐⭐ (Pendente)</p>
                     <p>Serve em celular, PC e notebook. ✅</p>
                     <p>Uso profissional para retorno de palco e boa distribuição de graves e agudos. ✅</p>
+                    <button class="btn-comprar" onclick="comprar('KZ EDX PRO')">
+                        🛒 Comprar
+                    </button>
                 </div>
 
                 <div class="produto">
-                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR9m-6y5-HjkE7YmrTvD_CI0fvKwt4RolwOOSn6ddp2-UVNQEvFTRWPVN3nfjtnxm0Vfw5VnNSnhjYhIWH1bbAlNdRNb2xcO8MFeoUvrnEAJ-CcUsnUhh3h2mdit_BXVw&usqp=CAc"
+                    <img id="qkz-img"
+                        src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR9m-6y5-HjkE7YmrTvD_CI0fvKwt4RolwOOSn6ddp2-UVNQEvFTRWPVN3nfjtnxm0Vfw5VnNSnhjYhIWH1bbAlNdRNb2xcO8MFeoUvrnEAJ-CcUsnUhh3h2mdit_BXVw&usqp=CAc"
                         alt="QKZ AK6">
-                    <div class="selo premium">🔴 Produto premium</div>
+
+                    <div class="variacoes">
+                        <button
+                            onclick="trocarQKZ('https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR9m-6y5-HjkE7YmrTvD_CI0fvKwt4RolwOOSn6ddp2-UVNQEvFTRWPVN3nfjtnxm0Vfw5VnNSnhjYhIWH1bbAlNdRNb2xcO8MFeoUvrnEAJ-CcUsnUhh3h2mdit_BXVw&usqp=CAc')">
+                            🟣
+                        </button>
+
+                        <button
+                            onclick="trocarQKZ('data:image/jpeg;base64,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')">
+                            ⚫
+                        </button>
+
+                        <button
+                            onclick="trocarQKZ('https://m.media-amazon.com/images/I/610XX92HjKL._AC_UF1000,1000_QL80_.jpg')">
+                            🔵-🔴
+                        </button>
+                    </div>
+                    <div class="selo premium">🔴 Produto premium
+                    </div>
                     <div class="selo melhorpreco">🔥 Melhor preço</div>
                     <h3>QKZ AK6</h3>
                     <p class="preco-antigo">🔥 PREÇO: <s>R$49,99</s></p>
@@ -545,6 +642,9 @@
                     <p class="avaliacao">⭐⭐⭐⭐⭐ (Pendente)</p>
                     <p>Serve em celular, PC e notebook. ✅</p>
                     <p>Uso profissional e boa distribuição de graves e agudos. ✅</p>
+                    <button class="btn-comprar" onclick="comprar('QKZ AK6')">
+                        🛒 Comprar
+                    </button>
                 </div>
 
                 <div class="produto">
@@ -553,11 +653,14 @@
                     <div class="selo entrada">🟢 Produto de entrada</div>
                     <h3>H'Maston EJ-S8</h3>
                     <p class="preco-antigo">🔥 PREÇO: <s>R$22,99</s></p>
-                    <p class="preco">R$17,99</p>
+                    <p class="preco">R$16,99</p>
                     <p class="avaliacao">⭐⭐⭐⭐⭐ (Pendente)</p>
                     <p>Ideal para uso diário, chamadas, vídeos e música. ✅</p>
                     <p>Opção acessível para quem quer gastar pouco. ✅</p>
                     <p class="restante">⚠️ ESTOQUE LIMITADO</p>
+                    <button class="btn-comprar" onclick="comprar('H\'Maston EJ-S8')">
+                        🛒 Comprar
+                    </button>
                 </div>
 
                 <div class="produto">
@@ -566,17 +669,125 @@
                     <div class="selo intermediario">🔵 Produto intermediário</div>
                     <div class="selo melhorpreco">🔥 Melhor preço</div>
                     <h3>Fone Bluetooth A6S</h3>
-                    <p class="preco-antigo">🔥 PREÇO: <s>R$34,99</s></p>
-                    <p class="preco">R$29,99</p>
+                    <p class="preco-antigo">🔥 PREÇO: <s>R$44,99</s></p>
+                    <p class="preco">R$34,99</p>
                     <p class="avaliacao">⭐⭐⭐⭐⭐ (Pendente)</p>
                     <p>Versão sem fio com case carregadora. ✅</p>
                     <p>Mais liberdade, mais praticidade e visual moderno. ✅</p>
                     <p class="restante">⚠️ POUCAS UNIDADES</p>
+                    <button class="btn-comprar" onclick="comprar('Fone Bluetooth A6S')">
+                        🛒 Comprar
+                    </button>
                 </div>
             </div>
         </div>
     </section>
+    <section id="carregadores">
+        <div class="container">
+            <h2 class="sec-titulo">CARREGADORES</h2>
+            <p class="sec-subtitulo">
+                Opções que vão desde modelos acessíveis para trabalho e uso casual até opções gamer de alto desempenho.
+            </p>
 
+            <div class="produtos">
+                <div class="produto">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSgVfpY6W0-4abrIRinqIfq_EiCfqv8xdn1LSV3HIOonC1nEiCYWPnlADHhLDRsz-5cqnAQI_nFZaRrMrNOwYbjeVnC4Ky4KIiU7KF8VeY&usqp=CAc"
+                        alt="Cooler celular">
+                    <div class="selo utilitario">🧰 Utilitário</div>
+                    <h3>Carregador TURBO A'gold</h3>
+                    <p class="preco-antigo">🔥 PREÇO: <s>R$34,99</s></p>
+                    <p class="preco">R$24,99</p>
+                    <p class="avaliacao">⭐⭐⭐⭐⭐ (Pendente)</p>
+                    <p>Carregamento rápido de 15W ✅</p>
+                    <p>Homologação Anatel (Produto original)✅</p>
+                    <button class="btn-comprar" onclick="comprar('Carregador TURBO A\'gold')">
+                        🛒 Comprar
+                    </button>
+                </div>
+
+                <div class="produto">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_636729-MLB106532191170_022026-F.webp"
+                        alt="Cooler celular">
+                    <div class="selo utilitario">🧰 Utilitário</div>
+                    <h3>Cabo Micro-USB/Iphone 2 em 1</h3>
+                    <p class="preco-antigo">🔥 PREÇO: <s>R$18,99</s></p>
+                    <p class="preco">R$14,99</p>
+                    <p class="avaliacao">⭐⭐⭐⭐⭐ (Pendente)</p>
+                    <p>Carregamento rápido de 15W ✅</p>
+                    <p>Cabo versátil com dupla compatibilidade✅</p>
+                    <p>Revestimento em silicone para garantir alta durabilidade e longevidade de vida, além de uma maior
+                        dispersão de calor. ✅</p>
+                    <button class="btn-comprar" onclick="comprar('Cabo Micro-USB/Iphone 2 em 1')">
+                        🛒 Comprar
+                    </button>
+                </div>
+                <div class="produto">
+                    <img src="https://down-br.img.susercontent.com/file/sg-11134201-824im-meiubuq8nfuq7a"
+                        alt="Powerbank">
+                    <div class="selo utilitario">🧰 Utilitário</div>
+                    <div class="selo intermediario">🔵 Produto intermediário</div>
+                    <div class="selo procurado">⭐ Mais procurado (#2)</div>
+                    <div class="selo melhorpreco">🔥 Melhor preço</div>
+                    <h3>Powerbank</h3>
+                    <p class="preco-antigo">🔥 PREÇO: <s>R$64,99</s></p>
+                    <p class="preco">R$59,99</p>
+                    <p class="avaliacao">⭐⭐⭐⭐⭐ (Pendente)</p>
+                    <p>Ideal para emergência e para quem passa muito tempo fora de casa. ✅</p>
+                    <p>Carregamento portátil e praticidade no dia a dia. ✅</p>
+                    <p class="restante">⚠️ JÁ DISPONÍVEL NO ESTOQUE!</p>
+                    <button class="btn-comprar" onclick="comprar('Powerbank')">
+                        🛒 Comprar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="teclados">
+        <div class="container">
+            <h2 class="sec-titulo">TECLADOS</h2>
+            <p class="sec-subtitulo">
+                Opções que vão desde modelos acessíveis para trabalho e uso casual até opções gamer de alto desempenho.
+            </p>
+
+            <div class="produtos">
+                <div class="produto">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_864027-MLA91989775809_092025-B.webp"
+                        alt="Mouse double click">
+                    <div class="selo intermediario">🔵 Produto intermediário</div>
+                    <div class="selo melhorpreco">🔥 Melhor preço</div>
+                    <h3>Teclado RGB Legacy</h3>
+                    <p class="preco-antigo">🔥 PREÇO: <s>R$79,99</s></p>
+                    <p class="preco">R$65,99</p>
+                    <p class="avaliacao">⭐⭐⭐⭐⭐ (Pendente)</p>
+                    <p>Iluminação RGB. ✅</p>
+                    <p>Base para apoio de mão ✅</p>
+                    <p>Tamanho Full-Size ideal para multitarefas e sendo versátil entre trabalhos e jogos ✅</p>
+                    <p>Membrana que garante silêncio e conforto no trabalho e na diversão ✅</p>
+                    <button class="btn-comprar" onclick="comprar('Teclado RGB Legacy')">
+                        🛒 Comprar
+                    </button>
+                </div>
+
+                <div class="produto">
+                    <img src="https://down-br.img.susercontent.com/file/sg-11134301-7rdwl-m0sestlno9fy77"
+                        alt="Mouse RGB">
+                    <div class="selo premium">🔴 Produto premium</div>
+                    <div class="selo melhorpreco">🔥 Melhor preço</div>
+                    <h3>Teclado 60% RGB - Switch blue</h3>
+                    <p class="preco-antigo">🔥 PREÇO: <s>R$149,99</s></p>
+                    <p class="preco">R$124,99</p>
+                    <p class="avaliacao">⭐⭐⭐⭐⭐ (Pendente)</p>
+                    <p>Iluminação RGB. ✅</p>
+                    <p>Tamanho 60% compacto perfeito para jogos e transportabilidade. ✅</p>
+                    <p>Switchs blue táteis ✅</p>
+                    <p class="restante">⚠️ APENAS POR ENCOMENDA (por enquanto) </p>
+                    <button class="btn-comprar" onclick="comprar('Teclado 60% RGB - Switch blue')">
+                        🛒 Comprar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="mouses">
         <div class="container">
             <h2 class="sec-titulo">MOUSES</h2>
@@ -590,12 +801,15 @@
                         alt="Mouse double click">
                     <div class="selo intermediario">🔵 Produto intermediário</div>
                     <div class="selo melhorpreco">🔥 Melhor preço</div>
-                    <h3>Mouse Gamer Double/Auto Click</h3>
+                    <h3>Mouse Gamer Double Click</h3>
                     <p class="preco-antigo">🔥 PREÇO: <s>R$44,99</s></p>
                     <p class="preco">R$34,99</p>
                     <p class="avaliacao">⭐⭐⭐⭐⭐ (Pendente)</p>
                     <p>Iluminação RGB. ✅</p>
                     <p>Design ergonômico premium e botão extra. ✅</p>
+                    <button class="btn-comprar" onclick="comprar('Mouse Gamer Double Click')">
+                        🛒 Comprar
+                    </button>
                 </div>
 
                 <div class="produto">
@@ -609,6 +823,9 @@
                     <p>Iluminação LED/RGB. ✅</p>
                     <p>Design AMBI-DESTRO e bom custo-benefício. ✅</p>
                     <p class="restante">⚠️ POUCAS UNIDADES</p>
+                    <button class="btn-comprar" onclick="comprar('Mouse RGB')">
+                        🛒 Comprar
+                    </button>
                 </div>
             </div>
         </div>
@@ -627,12 +844,15 @@
                         alt="Mousepad 65x30">
                     <div class="selo intermediario">🔵 Produto intermediário</div>
                     <div class="selo melhorpreco">🔥 Melhor preço</div>
-                    <h3>Mousepad Gamer 65x30</h3>
+                    <h3>Mousepad Gamer 65x30 (Dragon)</h3>
                     <p class="preco-antigo">🔥 PREÇO: <s>R$34,99</s></p>
                     <p class="preco">R$29,99</p>
                     <p class="avaliacao">⭐⭐⭐⭐⭐ (Pendente)</p>
                     <p>Base emborrachada antiderrapante. ✅</p>
                     <p>Borda costurada e tamanho grande. ✅</p>
+                    <button class="btn-comprar" onclick="comprar('Mousepad Gamer 65x30 (Dragon)')">
+                        🛒 Comprar
+                    </button>
                 </div>
 
                 <div class="produto">
@@ -640,12 +860,15 @@
                         alt="Mousepad ninja">
                     <div class="selo intermediario">🔵 Produto intermediário</div>
                     <div class="selo melhorpreco">🔥 Melhor preço</div>
-                    <h3>Mousepad Gamer 65x30</h3>
+                    <h3>Mousepad Gamer 65x30 (Ninja)</h3>
                     <p class="preco-antigo">🔥 PREÇO: <s>R$34,99</s></p>
                     <p class="preco">R$29,99</p>
                     <p class="avaliacao">⭐⭐⭐⭐⭐ (Pendente)</p>
                     <p>Base emborrachada antiderrapante. ✅</p>
                     <p>Borda costurada e boa área de uso. ✅</p>
+                    <button class="btn-comprar" onclick="comprar('Mousepad Gamer 65x30 (Ninja)')">
+                        🛒 Comprar
+                    </button>
                 </div>
 
                 <div class="produto">
@@ -659,6 +882,9 @@
                     <p>Base emborrachada antiderrapante. ✅</p>
                     <p>Borda costurada e tecido premium. ✅</p>
                     <p class="restante">⚠️ JÁ DISPONÍVEL NO ESTOQUE!</p>
+                    <button class="btn-comprar" onclick="comprar('Cat Mousepad 20x20')">
+                        🛒 Comprar
+                    </button>
                 </div>
             </div>
         </div>
@@ -682,6 +908,9 @@
                     <p class="avaliacao">⭐⭐⭐⭐⭐ (Pendente)</p>
                     <p>Resistente contra poeira e impactos. ✅</p>
                     <p>Interior acolchoado e compartimento extra. ✅</p>
+                    <button class="btn-comprar" onclick="comprar('Case para Fones')">
+                        🛒 Comprar
+                    </button>
                 </div>
 
                 <div class="produto">
@@ -697,6 +926,9 @@
                     <p>Ideal para emergência e para quem passa muito tempo fora de casa. ✅</p>
                     <p>Carregamento portátil e praticidade no dia a dia. ✅</p>
                     <p class="restante">⚠️ JÁ DISPONÍVEL NO ESTOQUE!</p>
+                    <button class="btn-comprar" onclick="comprar('Powerbank')">
+                        🛒 Comprar
+                    </button>
                 </div>
 
                 <div class="produto">
@@ -710,7 +942,11 @@
                     <p>Ajuda a reduzir o aquecimento do celular. ✅</p>
                     <p>Ótimo para jogos e uso prolongado. ✅</p>
                     <p class="restante">⚠️ CHEGANDO EM BREVE!</p>
+                    <button class="btn-comprar" onclick="comprar('KZ EDX PRO')">
+                        🛒 Comprar
+                    </button>
                 </div>
+
             </div>
         </div>
     </section>
@@ -733,6 +969,19 @@
         <i class="fab fa-whatsapp"></i>
         <span>Peça agora!</span>
     </a>
+    <script>
+        function trocarKZ(imagem) {
+            document.getElementById("kz-img").src = imagem;
+        }
+        function trocarQKZ(imagem) {
+            document.getElementById("qkz-img").src = imagem;
+        }
+        function comprar(produto) {
+            window.open(
+                `https://wa.me/5521989813202?text=Olá! Quero comprar o ${produto}`
+            );
+        }
+    </script>
 </body>
 
 </html>
