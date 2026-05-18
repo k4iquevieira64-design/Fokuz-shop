@@ -769,8 +769,20 @@
                 </div>
 
                 <div class="produto">
-                    <img src="https://down-br.img.susercontent.com/file/sg-11134301-7rdwl-m0sestlno9fy77"
+                    <img id="teclado-img"
+                        src="https://down-br.img.susercontent.com/file/sg-11134301-7rdwl-m0sestlno9fy77"
                         alt="Mouse RGB">
+                    <div class="variacoes">
+                        <button
+                            onclick="trocarteclado('https://down-br.img.susercontent.com/file/sg-11134301-7rdwl-m0sestlno9fy77')">
+                            ⚪
+                        </button>
+
+                        <button
+                            onclick="trocarteclado('https://down-br.img.susercontent.com/file/sg-11134201-7ra0y-mb8b7gb2ffdcb0.webp')">
+                            ⚫
+                        </button>
+                    </div>
                     <div class="selo premium">🔴 Produto premium</div>
                     <div class="selo melhorpreco">🔥 Melhor preço</div>
                     <h3>Teclado 60% RGB - Switch blue</h3>
@@ -975,6 +987,9 @@
         }
         function trocarQKZ(imagem) {
             document.getElementById("qkz-img").src = imagem;
+        }
+        function trocarteclado(imagem) {
+            document.getElementById("teclado-img").src = imagem;
         }
         function comprar(produto) {
             window.open(
